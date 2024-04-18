@@ -1,4 +1,6 @@
+import { signOut } from 'firebase/auth';
 import ThemeChanger from './ThemeChanger';
+import { auth } from '../Firebase';
 
 function Navbar() {
   return (
@@ -11,7 +13,7 @@ function Navbar() {
                 <li className='flex items-center justify-center px-2'>
                     <ThemeChanger />
                 </li>
-                <li className='flex items-center justify-center px-1 font-semibold '>
+                <li onClick={()=>signOut(auth)} className='flex items-center justify-center px-1 font-semibold '>
                     Log out
                 </li>
                 {/* <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">

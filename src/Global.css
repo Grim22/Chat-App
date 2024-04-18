@@ -29,9 +29,14 @@
 
 @media screen and (max-width:768px) {
     .drawer-side {
-        width: 100% !important;
+        width: 400px !important;
     }
 }
  
+@media screen and (max-width:640px) {
+    .drawer-side {
+        width: 100% !important;
+    }
+}
 
 

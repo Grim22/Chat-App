@@ -19,7 +19,7 @@ function Sidebar() {
         <div className="drawer-side lg:bg-base-200 h-full">
             <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
             <ul className="menu p-0 w-full h-auto lg:full bg-base-200 text-base-content overflow-auto">
-                <div className='md:hidden'>
+                <div className='lg:hidden'>
                     <Navbar/>
                 </div>
                 <Search />

@@ -26,12 +26,12 @@ function Search() {
     }
 
     const handleKey = e=>{
-        e.code === "Enter" && handleSearch();
+         handleSearch();
     }
 
   return (
     <div className="search-bar-container h-auto flex flex-col p-5 pb-0 border-b-2 border-base-100">
-        <input onKeyDown={handleKey} 
+        <input onKeyUp={handleKey} 
                 onChange={e=>setUsername(e.target.value)} 
                 type="text" 
                 placeholder='Find a user' 

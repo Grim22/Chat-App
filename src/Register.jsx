@@ -44,8 +44,8 @@ function Register() {
                 navigate("/home")
 
             });
-        }
-    );
+            }
+        );
     }catch(err){
         setErr(true)
     }

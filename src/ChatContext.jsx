@@ -1,11 +1,10 @@
-import { onAuthStateChanged } from "firebase/auth";
-import { createContext, useContext, useEffect, useReducer, useState } from "react";
-import { auth } from "./Firebase";
+
+import { createContext, useContext, useReducer} from "react";
 import { AuthContext } from "./AuthContext";
 
-export const ChatContext = createContext()
+export const ChatContext = createContext();
 
-export const ChatContextProvider = ({children}) => {
+export const ChatContextProvider = ({ children }) => {
     const {currentUser} = useContext(AuthContext)
     const INITIAL_STATE = {
         chatId: "null",
@@ -21,7 +20,7 @@ export const ChatContextProvider = ({children}) => {
                         currentUser.uid > action.payload.uid 
                         ? currentUser.uid + action.payload.uid 
                         : action.payload.uid + currentUser.uid,
-                }
+                };
 
                 default:
                     return state;

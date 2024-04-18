@@ -3,12 +3,14 @@ import { useState, useContext } from "react";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../Firebase";
 import { AuthContext } from '../AuthContext'
+import { ChatContext } from "../ChatContext";
 
 function Chats() {
 
     const [chats,setChats] = useState([])
 
     const {currentUser} = useContext(AuthContext)
+    const { dispatch } = useContext(ChatContext)
 
     useEffect(() =>{
         const getChats = () => {
@@ -24,17 +26,23 @@ function Chats() {
         currentUser.uid && getChats()
     }, [currentUser.uid]);
 
+    const handleSelect = (u) => {
+        dispatch({type: "CHANGE_USER", payload: u})
+    }
+
   return (
     <div className="chats">
-        {Object.entries(chats)?.map((chat) => (
+        {Object.entries(chats)?.sort((a, b)=>b[1].date - a[1].date).map((chat) => (
 
-        <div key={chat[0]}className="profile-container h-24 flex p-5 items-center">
+        <div onClick={()=>handleSelect(chat[1].userInfo)} 
+            key={chat[0]}
+            className="profile-container h-24 flex p-5 items-center">
             <div className="avatar-container mr-5">
                 <img src={chat[1].userInfo.photoURL} className='h-12 w-12 object-cover rounded-full' />
             </div>
             <div className="name-container flex flex-col">
                 <span className='text-primary text-lg font-semibold w-full flex justify-start '>{chat[1].userInfo.displayName}</span>
-                <p className="">{chat[1].userInfo.lastMessage?.text}</p>
+                <p className="">{chat[1].lastMessage?.text}</p>
             </div>
         </div>
                     

@@ -72,7 +72,7 @@ function Register() {
                     {err && <span>Something went wrong.</span>}
                 </div>
             </form>
-            <p>You do have an account? <Link to="/" className="text-primary">Login</Link></p>
+            <p>Already have an account? <Link to="/" className="text-primary">Login</Link></p>
         </div>
     </div>
   )

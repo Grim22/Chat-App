@@ -3,6 +3,7 @@ import Chat from './Chat';
 import Navbar from './Navbar';
 import Search from './Search';
 import comp from '../assets/comp.jpg'
+import Chats from './Chats';
 
 function Sidebar() {
   return (
@@ -22,21 +23,7 @@ function Sidebar() {
                     <Navbar/>
                 </div>
                 <Search />
-                <div className="contact h-24 max-h-24 flex flex-row items-center p-5">
-                    <div className="avatar-container">
-                    <img src={comp} className='h-12 w-14 object-cover rounded-full' />
-                    </div>
-                    <div className="text-container w-full flex flex-col ml-5">
-                        <div className="name text-primary text-lg font-semibold w-full flex justify-start">
-                            Grim
-                        </div>
-                        <div className="last-message h-5 w-full flex justify-start ">
-                            <p className='text-clip overflow-hidden'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quisquam at corporis voluptate sed nemo, amet a cum voluptatibus voluptatum praesentium officia tempora dolore impedit iste, architecto porro magnam unde.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <Chats />
             </ul>
         </div>
     </div>

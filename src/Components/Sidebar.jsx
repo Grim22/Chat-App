@@ -2,7 +2,7 @@
 import Chat from './Chat';
 import Navbar from './Navbar';
 import Search from './Search';
-import av from '../assets/react.svg'
+import comp from '../assets/comp.jpg'
 
 function Sidebar() {
   return (
@@ -23,10 +23,10 @@ function Sidebar() {
                 </div>
                 <Search />
                 <div className="contact h-24 max-h-24 flex flex-row items-center p-5">
-                    <div className="avatar-container mr-5">
-                            <img src={av} alt="" />
+                    <div className="avatar-container">
+                    <img src={comp} className='h-12 w-14 object-cover rounded-full' />
                     </div>
-                    <div className="text-container w-full flex flex-col">
+                    <div className="text-container w-full flex flex-col ml-5">
                         <div className="name text-primary text-lg font-semibold w-full flex justify-start">
                             Grim
                         </div>

@@ -30,7 +30,7 @@ function Search() {
     }
 
   return (
-    <div className="search-bar-container h-auto flex flex-col p-5 pb-0">
+    <div className="search-bar-container h-auto flex flex-col p-5 pb-0 border-b-2 border-base-100">
         <input onKeyDown={handleKey} 
                 onChange={e=>setUsername(e.target.value)} 
                 type="text" 
@@ -39,10 +39,10 @@ function Search() {
         {err && <span>User not found!</span>}
         {user && <div className="profile-container flex py-5 items-center">
                     <div className="avatar-container mr-5">
-                        <img src={user.photoURL} alt="" />
+                        <img src={user.photoURL} className='h-12 w-12 object-cover rounded-full' />
                     </div>
                     <div className="name-container">
-                        <span>{user.displayName}</span>
+                        <span className='text-primary text-lg font-semibold w-full flex justify-start '>{user.displayName}</span>
                     </div>
                 </div>}
     </div>

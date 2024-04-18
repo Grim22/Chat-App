@@ -1,6 +1,7 @@
 
 import Chat from './Chat';
 import Navbar from './Navbar';
+import Search from './Search';
 import av from '../assets/react.svg'
 
 function Sidebar() {
@@ -20,17 +21,7 @@ function Sidebar() {
                 <div className='md:hidden'>
                     <Navbar/>
                 </div>
-                <div className="search-bar-container h-auto flex flex-col p-5 pb-0">
-                    <input type="text" placeholder='Search' className='input input-md h-10 input-bordered w-full'/>
-                    <div className="profile-container flex py-5 items-center">
-                        <div className="avatar-container mr-5">
-                            <img src={av} alt="" />
-                        </div>
-                        <div className="name-container">
-                            <p>React</p>
-                        </div>
-                    </div>
-                </div>
+                <Search />
                 <div className="contact h-24 max-h-24 flex flex-row items-center p-5">
                     <div className="avatar-container mr-5">
                             <img src={av} alt="" />

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.nav {
+    z-index: 100;
+}
+
+.chat-body::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width:2415px) {
+    .drawer-side {
+        width: 400px !important;
+    }
+}
+
+
+
+@media screen and (max-width:1024px) {
+    .drawer-side {
+        width: 400px !important;
+    }
+}
+ 
+
+@media screen and (max-width:768px) {
+    .drawer-side {
+        width: auto !important;
+    }
+}
+ 
+
+

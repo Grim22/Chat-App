@@ -29,7 +29,7 @@
 
 @media screen and (max-width:768px) {
     .drawer-side {
-        width: auto !important;
+        width: 100% !important;
     }
 }
  

@@ -16,7 +16,6 @@ function Chat() {
                 <span>{data.user.displayName}</span> 
             </div>
             <ul className="buttons-container w-4/6 flex items-center justify-end">
-                <li className="px-4">button</li>
                 <li><label htmlFor="my-drawer-2" className="btn btn-primary btn-sm drawer-button lg:hidden">Contact List</label></li>
             </ul>
         </div>

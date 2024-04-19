@@ -26,7 +26,7 @@ const Message = ({ message }) => {
                       />
         </div>
         <div className="message-content chat-bubble">
-            <p className="text-content">{message.text}</p>
+            <p className="text">{message.text}</p>
             {message.img && <img src={message.img} alt="" className="chat"/>}
         </div>
     </div>

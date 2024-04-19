@@ -32,22 +32,23 @@ function Chats() {
 
   return (
     <div className="chats">
-        {Object.entries(chats)?.sort((a, b)=>b[1].date - a[1].date).map((chat) => (
-
-        <div onClick={()=>handleSelect(chat[1].userInfo)} 
-            key={chat[0]}
-            className="profile-container h-24 flex p-5 items-center">
-            <div className="avatar-container mr-5">
-                <img src={chat[1].userInfo.photoURL} className='h-12 w-12 object-cover rounded-full' />
-            </div>
-            <div className="name-container flex flex-col">
-                <span className='text-primary text-lg font-semibold w-full flex justify-start '>{chat[1].userInfo.displayName}</span>
-                <p className="">{chat[1].lastMessage?.text}</p>
-            </div>
-        </div>
-                    
-           
-        ))}
+        <label htmlFor="my-drawer-2" className="drawer-button">
+            {Object.entries(chats)?.sort((a, b)=>b[1].date - a[1].date).map((chat) => (
+                
+            
+                <div onClick={()=>handleSelect(chat[1].userInfo)} 
+                    key={chat[0]}
+                    className="profile-container h-24 flex p-5 items-center hover:bg-base-300 cursor-pointer">
+                    <div className="avatar-container mr-5">
+                        <img src={chat[1].userInfo.photoURL} className='h-12 w-12 object-cover rounded-full' />
+                    </div>
+                    <div className="name-container flex flex-col">
+                        <span className='text-primary text-lg font-semibold w-full flex justify-start '>{chat[1].userInfo.displayName}</span>
+                        <p className="">{chat[1].lastMessage?.text}</p>
+                    </div>
+                </div>
+            ))}
+        </label>
     </div>
   )
 }

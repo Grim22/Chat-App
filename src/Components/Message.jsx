@@ -18,7 +18,7 @@ const Message = ({ message }) => {
   console.log(message)
 
   return (
-    <div ref={ref} className={`message flex gap-5 px-3 chat ${message.senderId === currentUser.uid && "owner flex flex-row-reverse items-center justify-start"}`}>
+    <div ref={ref} className={`message flex gap-5 mt-6 px-3 chat ${message.senderId === currentUser.uid && "owner flex flex-row-reverse items-center justify-start"}`}>
         <div className="message-info flex  items-center">
             <img src={message.senderId === currentUser.uid 
                       ? currentUser.photoURL 

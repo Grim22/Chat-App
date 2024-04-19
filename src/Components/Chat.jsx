@@ -25,16 +25,6 @@ function Chat() {
         </div>
         <div className="chat-input w-full h-[10vh] lg:h-[10vh] flex items-center px-2">
             <Input/>
-            {/* <div className="input-container grow pr-2">
-                <input type="text" placeholder="Aa" className="input input-bordered input-xl w-full grow" /> 
-            </div>
-            <div className="buttons-container">
-                <div className="send">
-                    <label className="btn btn-primary">
-                        SEnd
-                    </label>
-                </div>
-            </div> */}
         </div>
     </div>
   )

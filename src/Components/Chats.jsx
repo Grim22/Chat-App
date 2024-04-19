@@ -46,13 +46,7 @@ function Chats() {
             </div>
         </div>
                     
-            // <div key={chat[0]} className="user-chat">
-            //     <img src={chat[1].userInfo.photoURL} alt="" />
-            //     <div className="user-chat-info">
-            //         <span>{chat[1].userInfo.displayName}</span>
-            //         <p>{chat[1].userInfo.lastMessage?.text}</p>
-            //     </div>
-            // </div>
+           
         ))}
     </div>
   )

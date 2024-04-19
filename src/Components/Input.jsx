@@ -74,6 +74,7 @@ const Input = () => {
         <input type="text" 
                 placeholder="Aa"
                 value={text}
+                required
                 onChange={e=>setText(e.target.value)}
                 className="w-full"
                 />

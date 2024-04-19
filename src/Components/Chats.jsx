@@ -26,7 +26,6 @@ function Chats() {
         currentUser.uid && getChats()
     }, [currentUser.uid]);
 
-    console.log(chats)
 
     const handleSelect = (u) => {
         dispatch({type: "CHANGE_USER", payload: u})
@@ -36,8 +35,6 @@ function Chats() {
     <div className="chats">
         <label htmlFor="my-drawer-2" className="drawer-button">
             {Object.entries(chats).map((chat) => (
-                
-            
                 <div onClick={()=>handleSelect(chat[1].userInfo)} 
                     key={chat[0]}
                     className="profile-container h-24 flex p-5 items-center hover:bg-base-300 cursor-pointer">

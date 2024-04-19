@@ -15,6 +15,8 @@ const Message = ({ message }) => {
     ref.current?.scrollIntoView({behavior: "smooth"})
   }, [message]);
 
+  console.log(message)
+
   return (
     <div ref={ref} className={`message flex gap-5 px-3 chat ${message.senderId === currentUser.uid && "owner flex flex-row-reverse items-center justify-start"}`}>
         <div className="message-info flex  items-center">

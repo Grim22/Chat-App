@@ -2,7 +2,6 @@ import { useContext, useEffect } from "react"
 import { AuthContext } from "../AuthContext"
 import { ChatContext } from "../ChatContext"
 import { useRef } from "react"
-import { serverTimestamp } from "firebase/firestore"
 
 
 const Message = ({ message }) => {

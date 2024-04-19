@@ -1,7 +1,6 @@
 import Input from "./Input";
 import { ChatContext } from "../ChatContext"
 import { useContext } from "react";
-import Chats from "./Chats";
 import Messages from "./Messages";
 
 

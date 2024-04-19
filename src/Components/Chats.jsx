@@ -26,6 +26,8 @@ function Chats() {
         currentUser.uid && getChats()
     }, [currentUser.uid]);
 
+    console.log(chats)
+
     const handleSelect = (u) => {
         dispatch({type: "CHANGE_USER", payload: u})
     }
@@ -33,7 +35,7 @@ function Chats() {
   return (
     <div className="chats">
         <label htmlFor="my-drawer-2" className="drawer-button">
-            {Object.entries(chats)?.sort((a, b)=>b[1].date - a[1].date).map((chat) => (
+            {Object.entries(chats).map((chat) => (
                 
             
                 <div onClick={()=>handleSelect(chat[1].userInfo)} 

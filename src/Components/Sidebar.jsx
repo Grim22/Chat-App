@@ -2,7 +2,6 @@
 import Chat from './Chat';
 import Navbar from './Navbar';
 import Search from './Search';
-import comp from '../assets/comp.jpg'
 import Chats from './Chats';
 
 function Sidebar() {

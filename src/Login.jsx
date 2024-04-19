@@ -31,7 +31,7 @@ function Login() {
                 <input type="password" placeholder='password' className="input"/>
                 <button className="btn btn-primary">Sign in</button>
                 <div className="flex justify-center">
-                    {err && <span>Something went wrong.</span>}
+                    {err && <span>Invalid Email or Password</span>}
                 </div>
             </form>
             <p>Don't have an account? <Link to ="/register" className="text-primary">Sign up</Link></p>
